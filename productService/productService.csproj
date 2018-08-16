@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="consul" Version="0.7.2.6" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
