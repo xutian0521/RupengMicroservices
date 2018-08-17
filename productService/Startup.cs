@@ -46,7 +46,7 @@ namespace ProductService
             string ip = Configuration["ip"];
             int port = Convert.ToInt32(Configuration["port"]);
             string serviceName = "ProductService";
-            string serviceId = serviceName + Guid.NewGuid();
+            string serviceId = serviceName + "--" + Guid.NewGuid();
             Console.WriteLine($"Service:{serviceName}--api:http://{ip}:{port}/api/health");
             using (var client = new ConsulClient(ConsulConfig))
             {

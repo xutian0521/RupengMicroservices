@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "ProductSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer1", "Consumer1\Consumer1.csproj", "{59AD5A17-6065-488A-8719-321B9C5AFF0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyTest", "PolicyTest\PolicyTest.csproj", "{7AE31A93-5A91-421D-BF01-FD63C77110B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{59AD5A17-6065-488A-8719-321B9C5AFF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59AD5A17-6065-488A-8719-321B9C5AFF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59AD5A17-6065-488A-8719-321B9C5AFF0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE31A93-5A91-421D-BF01-FD63C77110B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE31A93-5A91-421D-BF01-FD63C77110B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE31A93-5A91-421D-BF01-FD63C77110B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE31A93-5A91-421D-BF01-FD63C77110B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
