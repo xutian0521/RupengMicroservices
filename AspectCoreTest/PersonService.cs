@@ -11,7 +11,7 @@ namespace AspectCoreTest
         public virtual string Say()
         {
             string s = null;
-            s.ToArray();
+            //s.ToArray();
             return "Hellow !";
         }
     }

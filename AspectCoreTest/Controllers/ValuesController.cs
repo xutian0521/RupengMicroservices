@@ -12,14 +12,20 @@ namespace AspectCoreTest.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public PersonService _personService;
+        public ValuesController(PersonService personService)
+        {
+            this._personService= personService;
+        }
         // GET api/values
         [HttpGet("Say")]
         [CustomInterceptorAttribute]
         public virtual string Say()
         {
-            ProxyGeneratorBuilder proxyGeneratorBuilder = new ProxyGeneratorBuilder();
-            IProxyGenerator proxyGenerator = proxyGeneratorBuilder.Build();
-            PersonService person = proxyGenerator.CreateClassProxy<PersonService>();
+            // ProxyGeneratorBuilder proxyGeneratorBuilder = new ProxyGeneratorBuilder();
+            // IProxyGenerator proxyGenerator = proxyGeneratorBuilder.Build();
+            // PersonService person = proxyGenerator.CreateClassProxy<PersonService>();
+            PersonService person= _personService;
             return person.Say();
         }
         // GET api/values
