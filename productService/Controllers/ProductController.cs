@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -18,8 +19,26 @@ namespace ProductService.Controllers
             products.Add(new Product { Id = 3, Name = "天梭手表", Price = 9888, Description = "瑞士经典款，可好了" });
         }
         [HttpGet]
-        public IEnumerable<Product> Get()
+        public dynamic Get()
         {
+            try
+            {
+                string name = this.User.Identity.Name;//读取的就是"Name"这个特殊的 Claims 的值
+                string userId = this.User.FindFirst("UserId").Value;
+                string realName = this.User.FindFirst("RealName").Value;
+                string email = this.User.FindFirst("Email").Value;
+                Console.WriteLine($"name={name},userId={userId},realName={realName},email={email}");
+                products.Add(new Product { Id = long.Parse(userId), Name = name, Price = 123, Description = realName + email });
+
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"ex={ex.ToString()}");
+                return ex;
+            }
+
             return products;
         }
         [HttpGet("{id}")]
