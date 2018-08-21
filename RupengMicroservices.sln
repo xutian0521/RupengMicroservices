@@ -7,17 +7,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsgService", "MsgService\Ms
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductService", "ProductService\ProductService.csproj", "{693AD529-15A4-4971-8DF8-40B4B43F690F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer1", "Consumer1\Consumer1.csproj", "{59AD5A17-6065-488A-8719-321B9C5AFF0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consumer1", "Consumer1\Consumer1.csproj", "{59AD5A17-6065-488A-8719-321B9C5AFF0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolicyTest", "PolicyTest\PolicyTest.csproj", "{7AE31A93-5A91-421D-BF01-FD63C77110B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolicyTest", "PolicyTest\PolicyTest.csproj", "{7AE31A93-5A91-421D-BF01-FD63C77110B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreTest", "AspectCoreTest\AspectCoreTest.csproj", "{210B7E2B-BAAE-45A7-9750-4FEA004C256D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectCoreTest", "AspectCoreTest\AspectCoreTest.csproj", "{210B7E2B-BAAE-45A7-9750-4FEA004C256D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHystrix", "MyHystrix\MyHystrix.csproj", "{BE39932F-5835-49E2-8B3D-2100757EED20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyHystrix", "MyHystrix\MyHystrix.csproj", "{BE39932F-5835-49E2-8B3D-2100757EED20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotTest", "OcelotTest\OcelotTest.csproj", "{1361C7EF-D5C8-4B00-BCA7-378340B66774}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotTest", "OcelotTest\OcelotTest.csproj", "{1361C7EF-D5C8-4B00-BCA7-378340B66774}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTTest", "JWTTest\JWTTest.csproj", "{9ABDD940-8DA5-4279-A893-B0D86D6AA180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTTest", "JWTTest\JWTTest.csproj", "{9ABDD940-8DA5-4279-A893-B0D86D6AA180}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot_Id", "Ocelot_Id", "{1B539AEF-A094-45D2-8311-496B693AF833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID4.IdentityServer", "ID4.IdentityServer\ID4.IdentityServer.csproj", "{BADF7516-4461-4363-AE34-08910FECCC78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,9 +61,16 @@ Global
 		{9ABDD940-8DA5-4279-A893-B0D86D6AA180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ABDD940-8DA5-4279-A893-B0D86D6AA180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ABDD940-8DA5-4279-A893-B0D86D6AA180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADF7516-4461-4363-AE34-08910FECCC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADF7516-4461-4363-AE34-08910FECCC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADF7516-4461-4363-AE34-08910FECCC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADF7516-4461-4363-AE34-08910FECCC78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BADF7516-4461-4363-AE34-08910FECCC78} = {1B539AEF-A094-45D2-8311-496B693AF833}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4002163-7AB9-4B6B-AC8C-C1FB4E30C21F}
