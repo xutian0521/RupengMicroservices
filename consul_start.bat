@@ -1,0 +1,1 @@
+consul.exe agent -dev

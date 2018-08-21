@@ -29,10 +29,10 @@ namespace ID4.IdentityServer
                 app.UseDeveloperExceptionPage();
             }
             app.UseIdentityServer();
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World!");
+            //});
         }
     }
 }

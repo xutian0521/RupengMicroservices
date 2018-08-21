@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTTest", "JWTTest\JWTTest.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ocelot_Id", "Ocelot_Id", "{1B539AEF-A094-45D2-8311-496B693AF833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID4.IdentityServer", "ID4.IdentityServer\ID4.IdentityServer.csproj", "{BADF7516-4461-4363-AE34-08910FECCC78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ID4.IdentityServer", "ID4.IdentityServer\ID4.IdentityServer.csproj", "{BADF7516-4461-4363-AE34-08910FECCC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ID4.Ocelot", "ID4.Ocelot\ID4.Ocelot.csproj", "{82DEF972-352B-4F8D-B63E-434A1D53441D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,12 +67,17 @@ Global
 		{BADF7516-4461-4363-AE34-08910FECCC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BADF7516-4461-4363-AE34-08910FECCC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BADF7516-4461-4363-AE34-08910FECCC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82DEF972-352B-4F8D-B63E-434A1D53441D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82DEF972-352B-4F8D-B63E-434A1D53441D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82DEF972-352B-4F8D-B63E-434A1D53441D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82DEF972-352B-4F8D-B63E-434A1D53441D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BADF7516-4461-4363-AE34-08910FECCC78} = {1B539AEF-A094-45D2-8311-496B693AF833}
+		{82DEF972-352B-4F8D-B63E-434A1D53441D} = {1B539AEF-A094-45D2-8311-496B693AF833}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4002163-7AB9-4B6B-AC8C-C1FB4E30C21F}
