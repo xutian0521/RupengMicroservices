@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Polly;
 using Polly.Timeout;
@@ -17,7 +18,9 @@ namespace PolicyTest
             //PollyWarpTest();
             //PollyTimeoutTest();
             //await PollyTimeoutTest1Async();
-            await PollyTimeoutTest2Async();
+            //await PollyTimeoutTest2Async();
+            //PollyCircuitBreakerTest2();
+            await PollyCircuitBreakerTest3();
             Console.ReadKey();
         }
         //------------------------------------------降级处理 Fallback--------------------------------------------
@@ -275,6 +278,73 @@ namespace PolicyTest
                     }
                 );
             Console.WriteLine(resultStr);
+        }
+
+        static void PollyCircuitBreakerTest2()
+        {
+
+            Policy policyTimeout = Policy.Timeout(3, Polly.Timeout.TimeoutStrategy.Pessimistic);
+
+            Policy policy = Policy.Handle<Exception>()
+                .CircuitBreaker(3, TimeSpan.FromSeconds(10));
+
+
+            Policy policyFallBack = Policy.Handle<Exception>()
+                .Fallback(() => Console.WriteLine("Timeout降级 o(￣ヘ￣o＃)"));
+            policy = policy.Wrap(policyTimeout);
+            policyFallBack = policyFallBack.Wrap(policy);
+            while (true)
+            {
+                //try
+                //{
+                policyFallBack.Execute(() => {
+                        Console.WriteLine("开始任务 ^_^");
+                        //throw new Exception("出错！");
+                        Thread.Sleep(10000);
+                        Console.WriteLine("完成任务");
+                    });
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine("Circuit Breaker出错  o(╥﹏╥)o");
+                //}
+                System.Threading.Thread.Sleep(500);
+
+            }
+
+        }
+        static async Task PollyCircuitBreakerTest3()
+        {
+
+            Policy policyTimeout = Policy.TimeoutAsync(3, Polly.Timeout.TimeoutStrategy.Pessimistic);
+
+            Policy policy = Policy.Handle<Exception>()
+                .CircuitBreakerAsync(3, TimeSpan.FromSeconds(10));
+
+
+            Policy policyFallBack = Policy.Handle<Exception>()
+                .FallbackAsync(async c => { Console.WriteLine("Timeout降级 o(￣ヘ￣o＃)"); });
+            policy = policy.WrapAsync(policyTimeout);
+            policyFallBack = policyFallBack.WrapAsync(policy);
+            while (true)
+            {
+                //try
+                //{
+                await policyFallBack.ExecuteAsync(async () => {
+                    Console.WriteLine("开始任务 ^_^");
+                    //throw new Exception("出错！");
+                    await Task.Delay(10000);
+                    Console.WriteLine("完成任务");
+                });
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine("Circuit Breaker出错  o(╥﹏╥)o");
+                //}
+                await Task.Delay(500);
+
+            }
+
         }
     }
 }
